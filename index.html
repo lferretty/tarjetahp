@@ -20,7 +20,7 @@
             min-height: 100vh;
             padding: 10px;
             box-sizing: border-box;
-            
+            overflow: hidden;         
             
         }
 
@@ -67,6 +67,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            
         }
 
         
@@ -131,13 +132,6 @@
     <script>
         document.getElementById('card').addEventListener('click', function() {
             this.classList.toggle('is-flipped');
-        });
-
-        // Opcional: Forzar redimensionamiento al cambiar orientación
-        window.addEventListener('orientationchange', function() {
-            setTimeout(function() {
-                window.dispatchEvent(new Event('resize'));
-            }, 300);
         });
     </script>
 </body>
